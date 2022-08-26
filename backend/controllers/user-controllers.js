@@ -1,4 +1,5 @@
 import User from "../models/users.js"
+import generateId from "../helpers/generateId.js"
 
 const register = async (req, res) =>{
 
@@ -11,6 +12,7 @@ const register = async (req, res) =>{
 
   try {
     const user = new User(req.body)
+    user.token = generateId()
     const storedUser = await user.save()
     res.json(storedUser)
   } catch (error) {
