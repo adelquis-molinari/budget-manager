@@ -52,7 +52,7 @@ const confirm = async (req, res) => {
 
   if (!userConfirm) {
     const error = new Error("Invalid token.");
-    return res.status(403).json({ message: error.message });
+    return res.status(498).json({ message: error.message });
   }
 
   try {
@@ -65,4 +65,9 @@ const confirm = async (req, res) => {
   }
 };
 
-export { register, userAuthentication, confirm };
+const profile = async (req, res) => {
+  const { user } = req;
+  res.json(user);
+};
+
+export { register, userAuthentication, confirm, profile };
