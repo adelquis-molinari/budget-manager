@@ -18,4 +18,4 @@ app.listen(PORT, () => {
 //Routing
 
 app.use("/api/users", usersRoutes);
-app.use("/api/proyects", projectsRoutes);
+app.use("/api/projects", projectsRoutes);

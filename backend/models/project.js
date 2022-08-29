@@ -8,7 +8,7 @@ const projectsSchema = mongoose.Schema(
       require: true,
     },
     description: {
-      type: toString,
+      type: String,
       trim: true,
       require: true,
     },
