@@ -12,7 +12,7 @@ const projectsSchema = mongoose.Schema(
       trim: true,
       require: true,
     },
-    fecha: {
+    date: {
       type: Date,
       default: Date.now(),
     },
