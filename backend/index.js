@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import connectDB from "./config/db.js";
 import usersRoutes from "./routes/users-routes.js";
 import projectsRoutes from "./routes/project-routes.js";
+import budgetRoutes from "./routes/budget-routes.js";
 
 const app = express();
 
@@ -19,3 +20,4 @@ app.listen(PORT, () => {
 
 app.use("/api/users", usersRoutes);
 app.use("/api/projects", projectsRoutes);
+app.use("/api/budget", budgetRoutes);
